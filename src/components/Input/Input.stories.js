@@ -6,11 +6,11 @@ export default {
   component: Input,
 };
 
-export const large = () => <Input variant="large" placeholder="Large" />;
-export const medium = () => <Input variant="medium" placeholder="Medium" />;
-export const small = () => <Input variant="small" placeholder="Small" />;
+export const Large = () => <Input variant="large" placeholder="Large" />;
+export const Medium = () => <Input variant="medium" placeholder="Medium" />;
+export const Small = () => <Input variant="small" placeholder="Small" />;
 
 // Rename
-large.storyName = "Large Input";
-medium.storyName = "Medium Input";
-small.storyName = "Small Input";
+Large.storyName = "Large Input";
+Medium.storyName = "Medium Input";
+Small.storyName = "Small Input";
