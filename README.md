@@ -19,6 +19,8 @@ e.g.
 
 ## Story Heirarchy
 
+### V5
+
 To nest components within same group make changes in default export like
 
 ```
@@ -27,4 +29,13 @@ title: "Form/Button",
 component: Button,
 };
 
+```
+
+### V6
+
+```
+export default {
+  title: "Form/Control/Button",
+  component: Button,
+};
 ```
