@@ -39,3 +39,12 @@ export default {
   component: Button,
 };
 ```
+
+## Rename Story component
+
+```
+// Rename
+large.storyName = "Large Input";
+medium.storyName = "Medium Input";
+small.storyName = "Small Input";
+```
