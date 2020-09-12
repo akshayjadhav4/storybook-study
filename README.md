@@ -61,3 +61,23 @@ goto .storybook/preview.js and add to sort stories alphabetically.
         : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
   },
 ```
+
+## Story within Story
+
+```
+import React from "react";
+import { Primary } from "../Button/Button.stories";
+import { Medium } from "../Input/Input.stories";
+
+export default {
+  title: "Form/Newsletter",
+};
+
+export const PrimaryNewsletter = () => (
+  <>
+    <Medium />
+    <Primary />
+  </>
+);
+
+```
