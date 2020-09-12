@@ -81,3 +81,65 @@ export const PrimaryNewsletter = () => (
 );
 
 ```
+
+## Using args in V6
+
+A story is a component with a set of arguments (props, slots, inputs, etc). “Args” are Storybook’s mechanism for defining those arguments as a first class entity that’s machine readable.
+
+```
+
+export default {
+  title: "Form/Control/Button",
+  component: Button,
+  args: {
+    children: "Button",
+  },
+};
+
+// Args
+const Template = (args) => <Button {...args} />;
+
+export const PrimaryA = Template.bind({});
+PrimaryA.args = {
+  variant: "primary",
+  children: "Primary Args",
+};
+
+// reusing args from another story (i.e from PrimaryA)
+export const LongPrimaryA = Template.bind({});
+LongPrimaryA.args = {
+  ...PrimaryA.args,
+  children: "Long Primary Args",
+};
+
+
+```
+
+```
+<!-- The args object can be defined at the story and component level -->
+
+export default {
+  title: "Form/Control/Button",
+  component: Button,
+  args: {
+    children: "Button",
+  },
+};
+
+
+// Args
+const Template = (args) => <Button {...args} />;
+
+export const PrimaryA = Template.bind({});
+PrimaryA.args = {
+  variant: "primary",
+};
+
+// reusing args from another story (i.e from PrimaryA)
+export const LongPrimaryA = Template.bind({});
+LongPrimaryA.args = {
+  ...PrimaryA.args,
+};
+
+
+```
