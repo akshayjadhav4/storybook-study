@@ -4,7 +4,12 @@ import { Button } from "@chakra-ui/core";
 export default {
   title: "Themed Button",
   component: Button,
-  argTypes: { onClick: { action: "clicked" } },
+  argTypes: {
+    onClick: { action: "clicked" },
+    disabled: {
+      type: "boolean",
+    },
+  },
 };
 
 const Templete = (args) => <Button {...args} />;
