@@ -211,3 +211,19 @@ addDecorator((story) => (
   </ThemeProvider>
 ));
 ```
+
+### V6
+
+```
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <Box m="5">
+        <Story />
+      </Box>
+    </ThemeProvider>
+  ),
+];
+
+```

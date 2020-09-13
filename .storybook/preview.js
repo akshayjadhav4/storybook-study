@@ -1,14 +1,28 @@
 import React from "react";
-import { addDecorator } from "@storybook/react";
+
+// V5
+// import { addDecorator } from "@storybook/react";
 
 import { ThemeProvider, CSSReset, theme, Box } from "@chakra-ui/core";
 
-addDecorator((story) => (
-  <ThemeProvider theme={theme}>
-    <CSSReset />
-    <Box m="5">{story()}</Box>
-  </ThemeProvider>
-));
+// addDecorator((story) => (
+//   <ThemeProvider theme={theme}>
+//     <CSSReset />
+//     <Box m="5">{story()}</Box>
+//   </ThemeProvider>
+// ));
+
+// V6
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      <CSSReset />
+      <Box m="5">
+        <Story />
+      </Box>
+    </ThemeProvider>
+  ),
+];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
