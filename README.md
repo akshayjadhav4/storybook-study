@@ -168,3 +168,17 @@ export default {
   decorators: [(story) => <Center>{story()}</Center>],
 };
 ```
+
+## Global Decorators
+
+For giving same style to all stories
+
+in .storybook/preview.js add
+
+```
+import React from "react";
+import { addDecorator } from "@storybook/react";
+import Center from "../src/components/Center/Center";
+
+addDecorator((story) => <Center>{story()}</Center>);
+```
