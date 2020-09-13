@@ -143,3 +143,28 @@ LongPrimaryA.args = {
 
 
 ```
+
+## Decorators
+
+First create base component with style you required then follow below methods:
+
+### 1 method
+
+```
+export const Danger = () => (
+  <Center>
+    <Button variant="danger">Danger</Button>
+  </Center>
+);
+```
+
+### 2 method
+
+```
+export default {
+  title: "Form/Control/Button",
+  component: Button,
+  <!-- define decorators -->
+  decorators: [(story) => <Center>{story()}</Center>],
+};
+```
