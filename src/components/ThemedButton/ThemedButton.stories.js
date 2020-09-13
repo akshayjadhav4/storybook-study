@@ -21,4 +21,8 @@ Danger.args = {
   children: "Success",
 };
 
-// export const Danger = () => <Button variantColor="red">Danger</Button>;
+export const Log = () => (
+  <Button variantColor="blue" onClick={() => console.log("Log Clicked")}>
+    Log On Console
+  </Button>
+);

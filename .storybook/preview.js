@@ -1,5 +1,5 @@
 import React from "react";
-
+import { withConsole } from "@storybook/addon-console";
 // V5
 // import { addDecorator } from "@storybook/react";
 
@@ -22,6 +22,7 @@ export const decorators = [
       </Box>
     </ThemeProvider>
   ),
+  (storyFn, context) => withConsole()(storyFn)(context),
 ];
 
 export const parameters = {
